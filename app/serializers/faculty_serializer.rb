@@ -1,5 +1,5 @@
 class FacultySerializer
-  include FastJsonapi::ObjectSerializer
+  include JSONAPI::Serializer
   attributes :name, :rank
 
   attribute :courses do |object|

@@ -8,8 +8,6 @@ namespace :db do
     Rake::Task['db:create'].invoke
     # Invoke rake db:migrate to set up db structure based on latest migrations
     Rake::Task['db:migrate'].invoke
-    # Set up test database with that same structure
-    Rake::Task['db:test:prepare'].invoke
 
     # Now go get the contexts and run the build all method
     require './test/contexts'
