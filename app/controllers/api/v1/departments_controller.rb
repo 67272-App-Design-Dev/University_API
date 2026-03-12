@@ -3,7 +3,7 @@ module Api::V1
 
     def index
       @departments = Department.active.alphabetical.all
-      render json: DepartmentSerializer.new(@departments).serialized_json
+      render json: DepartmentSerializer.new(@departments).serializable_hash
     end
     
   end
